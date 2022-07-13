@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react(), manualChunksPlugin()],
   root: process.cwd(),
   base: "/",
-  publicDir: "/public",
+  publicDir: "/",
   resolve: {
     mainFields: ["module", "jsnext:main", "jsnext"],
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
