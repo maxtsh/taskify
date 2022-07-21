@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root{
@@ -6,8 +6,10 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --gray-1: #F4F5F7;
     --gray-2: #999999;
+    --gray-3: #F2F3F5;
     --text-1: #9E9E9E;
     --blue-1: #2E4ACD;
+    --red-1: #FC3637;
 
     /* Icons */
     --i-size-1: 20px;
@@ -25,11 +27,23 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding:0;
     font-family: "Poppins", sans-serif !important;
+    font-size: 16px;
   }
 
   h1, h2, h3,h4,h5,h6,p{
     margin: 0;
     font-family: "Poppins", sans-serif !important;
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  height: 100vh;
+
+  .wrapper {
+    width: 100%;
+    flex: 60%;
+    padding: 2rem;
   }
 `;
 
