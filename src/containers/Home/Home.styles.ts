@@ -27,15 +27,14 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       flex: 33.33%;
-      padding: 0.45rem 0.5rem;
-      background-color: var(--gray-3);
-      border-radius: var(--brr-1);
 
       &-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex: 1;
+        padding: 0.45rem 0.5rem;
+        background-color: var(--gray-3);
+        border-radius: var(--brr-1);
 
         &-title {
           color: var(--black);
@@ -55,6 +54,24 @@ export const Container = styled.div`
           border-radius: var(--brr-1);
           padding: 0.25rem;
           background-color: var(--black);
+        }
+      }
+
+      &-list {
+        &-add {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60px;
+          border: 1px dashed var(--gray-4);
+          border-radius: var(--brr-1);
+          cursor: pointer;
+
+          &-icon {
+            font-size: 3rem;
+            color: var(--gray-4);
+          }
         }
       }
 

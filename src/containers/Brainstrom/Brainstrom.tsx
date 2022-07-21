@@ -1,7 +1,7 @@
 const BrainStorm: React.FC = () => {
   return (
-    <div>
-      <h1>BrainStorm</h1>
+    <div className="inprog">
+      <h1>In Progress...</h1>
     </div>
   );
 };
