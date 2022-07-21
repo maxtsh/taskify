@@ -59,6 +59,13 @@ export const Container = styled.div`
           font-size: 100%;
           cursor: pointer;
 
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--black);
+          }
+
           &-icon {
             font-size: var(--i-size-1);
             margin-right: 1rem;
@@ -85,6 +92,13 @@ export const Container = styled.div`
           font-size: 100%;
           padding: 0.5rem;
           cursor: pointer;
+
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--black);
+          }
 
           &-icon-1 {
             font-size: var(--i-size-1);
