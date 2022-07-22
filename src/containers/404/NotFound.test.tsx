@@ -1,6 +1,11 @@
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import NotFound from "./NotFound";
 
 describe("Not Found Page", () => {
+  beforeEach(() => {
+    render(<NotFound />);
+  });
+
   test("Renders title", () => {
     expect(screen.getByRole("title")).toBeInTheDocument();
   });
