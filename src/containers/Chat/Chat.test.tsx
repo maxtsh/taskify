@@ -1,5 +1,6 @@
+import { render } from "@testing-library/react";
 import Chat from "./Chat";
 
-test("pass", () => {
-  expect(true).toBe(true);
+test("Chat renders correctly", () => {
+  render(<Chat />);
 });

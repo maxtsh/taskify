@@ -1,5 +1,6 @@
+import { render } from "@testing-library/react";
 import Home from "./Home";
 
-test("pass", () => {
-  expect(true).toBe(true);
+test("Home renders correctly", () => {
+  render(<Home />);
 });

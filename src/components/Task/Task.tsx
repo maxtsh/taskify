@@ -24,15 +24,9 @@ const Task: React.FC = () => {
           <p className="footer-date-text">Jul 22</p>
         </div>
         <div className="footer-avatars">
-          <img className="footer-avatars-img" src="/public/assets/avatar.jpg" />
-          <img
-            className="footer-avatars-img"
-            src="/public/assets/avatar-2.png"
-          />
-          <img
-            className="footer-avatars-img"
-            src="/public/assets/avatar-3.jpg"
-          />
+          <img className="footer-avatars-img" src="/assets/avatar.jpg" />
+          <img className="footer-avatars-img" src="/assets/avatar-2.png" />
+          <img className="footer-avatars-img" src="/assets/avatar-3.jpg" />
         </div>
       </div>
     </Container>
