@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
         <div className="logobox">
           <div className="logobox-logo">
             <div className="logobox-logo-img">
-              <img src="/public/assets/logo.png" alt="logo" />
+              <img src="/assets/logo.png" alt="logo" />
             </div>
             <h3 className="logobox-logo-title">Taskify</h3>
           </div>

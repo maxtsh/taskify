@@ -20,7 +20,7 @@ const Header: React.FC<IProps> = ({ title, Icon }) => {
         </div>
         <div className="right-item">
           <img
-            src="/public/assets/avatar.jpg"
+            src="/assets/avatar.jpg"
             className="right-item-avatar"
             alt="Avatar"
           />

@@ -1,17 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import process from "process";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: process.cwd(),
-  base: "/",
-  publicDir: "/",
   resolve: {
-    mainFields: ["module", "jsnext:main", "jsnext"],
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     alias: [
       {
         find: "containers",
@@ -31,9 +24,13 @@ export default defineConfig({
       },
     ],
   },
-  server: {
-    host: "localhost",
-    port: "3030",
-    open: true,
+  test: {
+    /* for example, use global to avoid globals imports (describe, test, expect): */
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/mocks/setup.ts",
+    // you might want to disable it, if you don't have tests that rely on CSS
+    // since parsing CSS is slow
+    css: false,
   },
 });
