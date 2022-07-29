@@ -135,4 +135,51 @@ export const Container = styled.div`
       display: block;
     }
   `}
+
+  ${Responsive.mobile.standard`
+    .left{
+        &-title {
+          font-size: 130%;
+          font-weight: 600;
+        }
+
+        &-icon {
+          font-size: 140%;
+          margin-right: 0.5rem;
+        }
+    }
+
+    .right{
+      &-item {
+        width: 40px;
+        height: 40px;
+  
+        &-search {
+          font-size: 1rem;
+        }
+  
+        &-notif {
+          font-size: 1rem;
+        }
+  
+        &-avatar {
+          width: 100%;
+          height: 100%;
+        }
+  
+        &-count {
+          width: 15px;
+          height: 15px;
+          top: -2px;
+          right: 1px;
+          font-size: 80%;
+          font-weight: 400;
+        }
+  
+        :not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  `}
 `;
