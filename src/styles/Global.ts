@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, css } from "styled-components";
+import { Responsive } from "./Mixins";
 
 export const ScrollableTrack = css`
   ::-webkit-scrollbar {
@@ -65,7 +66,10 @@ const GlobalStyles = createGlobalStyle`
     --red-1: #FC3637;
 
     /* Icons */
-    --i-size-1: 20px;
+    --i-size-1: 10px;
+    --i-size-2: 20px;
+    --i-size-3: 30px;
+    --i-size-4: 40px;
     
 
     /* Border Radius */
@@ -108,6 +112,21 @@ export const Container = styled.div`
       align-items: center;
     }
   }
+
+  ${Responsive.laptop.standard`
+     .wrapper{
+      flex: 80%;
+      padding: 1rem;
+     }
+  `}
+
+  ${Responsive.tablet.standard`
+     .wrapper{
+      transition: all 0.3s ease-in-out;
+      flex: 90%;
+      padding: 0.5rem;
+     }
+  `}
 `;
 
 export default GlobalStyles;

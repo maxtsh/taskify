@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Responsive } from "styles/Mixins";
 
 const active = css`
   background-color: #fff;
@@ -67,7 +68,7 @@ export const Container = styled.div`
           }
 
           &-icon {
-            font-size: var(--i-size-1);
+            font-size: var(--i-size-2);
             margin-right: 1rem;
           }
 
@@ -101,13 +102,13 @@ export const Container = styled.div`
           }
 
           &-icon-1 {
-            font-size: var(--i-size-1);
+            font-size: var(--i-size-2);
             color: var(--gray-2);
             margin-right: 0.5rem;
           }
 
           &-icon-2 {
-            font-size: var(--i-size-1);
+            font-size: var(--i-size-2);
             margin-right: 0.5rem;
             color: var(--black);
           }
@@ -131,4 +132,124 @@ export const Container = styled.div`
       margin-left: 0.5rem;
     }
   }
+
+  ${Responsive.laptop.standard`
+      flex: 20%;
+  `}
+
+  ${Responsive.tablet.standard`
+    display: none;
+  `}
+`;
+
+export const Collapsed = styled.div`
+  transition: all 0.3s ease-in-out;
+  display: none;
+  background-color: var(--gray-1);
+
+  .c-top {
+    &-logobox {
+      display: flex;
+      justify-content: center;
+
+      &-img {
+        width: 50px;
+      }
+    }
+
+    &-title {
+      font-size: 100%;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .c-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    &-list {
+      padding: 0;
+      list-style: none;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        color: var(--text-1);
+        cursor: pointer;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: var(--black);
+        }
+
+        &-icon {
+          font-size: var(--i-size-3);
+        }
+
+        :not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .c-access {
+    margin-top: 1rem;
+
+    &-list {
+      padding: 0;
+      list-style: none;
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--black);
+        padding: 0.5rem;
+        cursor: pointer;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: var(--black);
+        }
+
+        &-icon {
+          font-size: var(--i-size-3);
+          color: var(--black);
+        }
+
+        :not(:first-child) {
+          margin-top: 0.5rem;
+        }
+
+        &.active {
+          ${active}
+        }
+      }
+    }
+  }
+
+  .c-buttom {
+    display: flex;
+    justify-content: center;
+
+    &-btnicon {
+      font-size: 200%;
+      color: #fff;
+    }
+  }
+
+  ${Responsive.tablet.standard`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 10%;
+    padding: 1rem 0.5rem;
+  `}
 `;

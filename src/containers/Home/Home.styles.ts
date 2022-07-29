@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Responsive } from "styles/Mixins";
 
 export const Container = styled.div`
   display: flex;
@@ -80,4 +81,17 @@ export const Container = styled.div`
       }
     }
   }
+
+  ${Responsive.tablet.standard`
+
+  .tasks{
+    flex-direction: column;
+
+      &-item{
+        margin-top: 2rem;
+        margin-right: 0 !important;
+        flex: 100%;
+      }
+    }
+  `}
 `;
