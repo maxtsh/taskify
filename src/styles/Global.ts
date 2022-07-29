@@ -68,6 +68,7 @@ const GlobalStyles = createGlobalStyle`
     /* Icons */
     --i-size-1: 10px;
     --i-size-2: 20px;
+    --i-size-25: 25px;
     --i-size-3: 30px;
     --i-size-4: 40px;
     

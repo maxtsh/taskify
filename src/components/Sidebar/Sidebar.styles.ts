@@ -187,7 +187,7 @@ export const Collapsed = styled.div`
         }
 
         &-icon {
-          font-size: var(--i-size-3);
+          font-size: var(--i-size-25);
         }
 
         :not(:first-child) {
@@ -220,7 +220,7 @@ export const Collapsed = styled.div`
         }
 
         &-icon {
-          font-size: var(--i-size-3);
+          font-size: var(--i-size-25);
           color: var(--black);
         }
 
