@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { BiBell } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 import { Container } from "./Header.styles";
 import type { IProps } from "./Header.types";
 
 const Header: React.FC<IProps> = ({ title, Icon }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container>
       <div className="left">
@@ -24,6 +27,15 @@ const Header: React.FC<IProps> = ({ title, Icon }) => {
             className="right-item-avatar"
             alt="Avatar"
           />
+        </div>
+        <div
+          className={open ? "hamburger open" : "hamburger"}
+          onClick={() => setOpen(!open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </Container>

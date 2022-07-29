@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Responsive } from "styles/Mixins";
 
 export const Container = styled.div`
   display: flex;
@@ -69,4 +70,69 @@ export const Container = styled.div`
       }
     }
   }
+
+  .hamburger {
+    width: 40px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    display: none;
+
+    span {
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 100%;
+      background: var(--black);
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      :nth-child(1) {
+        top: 25%;
+      }
+
+      :nth-child(2),
+      :nth-child(3) {
+        top: 50%;
+      }
+
+      :nth-child(4) {
+        top: 75%;
+      }
+    }
+
+    &.open {
+      span {
+        :nth-child(1) {
+          top: 25%;
+          width: 0%;
+          left: 50%;
+        }
+
+        :nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        :nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        :nth-child(4) {
+          top: 75%;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  ${Responsive.laptop.standard`
+    .hamburger{
+      display: block;
+    }
+  `}
 `;
